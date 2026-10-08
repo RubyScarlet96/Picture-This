@@ -8,16 +8,33 @@
   <title>Picture This!</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
+<!-- add all resized images to image folder -->
 <body>
   <header class="header">
     <div class="title">
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <!-- remove placeholder image, enter picture tag as a container.  -->
+    <picture>
+      <!-- enter multiple source sets so the browser chooses the appropriate image based on the device's screen size and pixels
+       starting with the landscape images at 320px (320, 640, 960) put them in quotations followed by pixel density with an x -->
+       <!-- i also realized I have to go from highest to lowest, so the min-width 320 will be dropped to the bottom -->
+       <source srcset="images/museum-320x.jpg,
+                       images/museum-640x.jpg 2x,
+                       images/museum-960x.jpg 3x"
+               media="(min-width:320px)"/>
+
+     <!-- probably could have kept original text since we need to input img src and alt attributes at bottom 
+       will not work without-->
+     <img class="og-image"
+          src="images/museum.jpg" 
+          alt="museum" />
+                       
+
+    </picture>
 
   </header>
 </body>
 
-</html>
+</html
