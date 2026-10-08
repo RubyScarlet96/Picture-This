@@ -40,7 +40,22 @@
                          images/museum-1440x1440.jpg 3x"
                 media="(min-width:960px)"/>
         <!-- next we add in the landscape images -->
-
+         <!-- 960px - 960, 1920,2880 -->
+        <source srcset="images/museum-960x.jpg,
+                       images/museum-1920x.jpg 2x,
+                       images/museum-2880x.jpg 3x"
+               media="(min-width:960px)"/>
+        <!-- 720px - 720px, 1440px, 2160px -->
+        <source srcset="images/museum-720x.jpg,
+                       images/museum-1440x.jpg 2x,
+                       images/museum-2160x2.jpg 3x"
+               media="(min-width:720px)"/>
+        <!-- 480px - 480px, 960px, 1440px -->
+        <source srcset="images/museum-480x.jpg,
+                       images/museum-960x.jpg 2x,
+                       images/museum-1440x.jpg 3x"
+               media="(min-width:480px)"/>
+        <!-- finally the 320px i put in earlier, but it should be at the bottom since it is the smallest -->
        <source srcset="images/museum-320x.jpg,
                        images/museum-640x.jpg 2x,
                        images/museum-960x.jpg 3x"
