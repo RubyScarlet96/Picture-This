@@ -1,0 +1,61 @@
+/* i noticed that the images well displaying have a border to the right of them so going to play in css to see if i can fix that */
+
+/* had to reset colour */
+header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: #5F9EA0 ;
+}
+
+/* attempted to get headings as close as possible */
+
+h1 {
+  font-family: 'roboto', sans-serif;
+  font-weight: black;
+  font-size: 2.5em;
+  color: #000000;;
+  padding: 0;
+  text-align: center;
+}
+
+/* adding in margin to get space between h2 and image  */
+h2 {
+  font-family: 'arial', sans-serif;
+  font-weight: black;
+  font-size: 1em;
+  color: #000000;
+  margin: 0 0 3em 0;
+  text-align: center;
+}
+
+/* remove padding from image 
+attempting to remove margin too*/
+/* picture {
+  padding: 0;
+  margin: 0;
+} */
+
+/* adding media query to adjust format based on screen size 
+use flex direction to change from column to row , removing padding still seems to be around image
+tried margin 0 but still seems to be a little bit at the bottom i can't seem to fix*/
+@media screen and (min-width: 960px) {
+  header { 
+    display: flex;
+    flex-direction: row;
+    /* space-between puts image to right where its supposed to be but puts text too far right */
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  /* needed to add in margin to move text appropriately but it glitches a bity around 960px */
+  header h1{
+    text-align: center;
+    margin: 20rem 0 0 25rem;
+  }
+  header h2{
+    text-align: center;
+    margin: 2rem 0 0 25rem;
+  }
+}
+/* when shrinking down i also notice the image is slightly bigger than the heading but this is as good as its goona get tonight */

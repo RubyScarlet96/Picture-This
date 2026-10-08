@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <!-- add all resized images to image folder -->
 <body>
@@ -42,14 +42,19 @@
                 media="(min-width:960px)"/>
         <!-- next we add in the landscape images -->
          <!-- 960px - 960, 1920,2880 -->
+          <!-- *after checking the html validator i asked claude if i missed anything 
+           because as a dyslexic museum as a really hard word for me to spell i got it wrong multiple times already trying to write
+           it noticed the source below competes
+           changing min width to 959, noticed it competes with the 960px image above -->
         <source srcset="images/museum-960x.jpg,
                        images/museum-1920x.jpg 2x,
                        images/museum-2880x.jpg 3x"
-               media="(min-width:960px)"/>
+               media="(min-width:959px)"/>
         <!-- 720px - 720px, 1440px, 2160px -->
+         <!-- had typo in image file line 54 caught after checking claudes analysis on my html -->
         <source srcset="images/museum-720x.jpg,
                        images/museum-1440x.jpg 2x,
-                       images/museum-2160x2.jpg 3x"
+                       images/museum-2160x.jpg 3x"
                media="(min-width:720px)"/>
         <!-- 480px - 480px, 960px, 1440px -->
         <source srcset="images/museum-480x.jpg,
